@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Editor de Placas</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Bibliotecas para gerar PDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Editor de Placas</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Modelos</a>
+      <a href="#">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="editor">
+      <h2>Crie sua Placa</h2>
+
+      <label>Modelo:
+        <select id="modelo">
+          <option value="vende">VENDE-SE</option>
+          <option value="aluga">ALUGA-SE</option>
+        </select>
+      </label>
+
+      <label>Texto adicional (ex: telefone):
+        <input type="text" id="telefone" placeholder="(  ) 9 XXXX-XXXX">
+      </label>
+
+      <label>Cor do fundo:
+        <input type="color" id="corFundo" value="#ffffff">
+      </label>
+
+      <label>Cor do texto:
+        <input type="color" id="corTexto" value="#000000">
+      </label>
+
+      <button onclick="atualizarPlaca()">Atualizar Placa</button>
+    </section>
+
+    <section id="placa-preview">
+      <h2>Visualização</h2>
+      <div id="placa">
+        <h1 id="placa-titulo">VENDE-SE</h1>
+        <p id="placa-texto">(  ) 9 XXXX-XXXX</p>
+      </div>
+      <button onclick="mostrarPagamento()">Gerar PDF (R$ 4,99)</button>
+    </section>
+
+    <section id="pagamento" class="hidden">
+      <h2>Pagamento via PIX</h2>
+      <p>Escaneie o QR Code e pague <b>R$ 4,99</b></p>
+      <img id="qrcode" src="https://quickchart.io/qr?text=00020101021226820014BR.GOV.BCB.PIX011305222074480520400005303986540499.905802BR5920Editor%20de%20Placas6009SAO%20PAULO62070503***6304B3B3" width="200">
+      <p><b>Chave PIX:</b> 05222074480</p>
+      <button onclick="liberarPDF()">Já paguei</button>
+    </section>
+
+    <section id="download" class="hidden">
+      <h2>Pagamento confirmado ✅</h2>
+      <button onclick="gerarPDF()">Clique aqui para baixar sua placa em PDF</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
