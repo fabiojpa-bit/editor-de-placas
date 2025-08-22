@@ -14,6 +14,15 @@ body {
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
+/* Título vertical */
+#editorTitle {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
 .controls label {
     display: block;
     margin-bottom: 10px;
