@@ -14,15 +14,6 @@ body {
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-/* Título vertical */
-#editorTitle {
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
 .controls label {
     display: block;
     margin-bottom: 10px;
@@ -39,8 +30,8 @@ body {
 .placa-preview {
     margin-top: 20px;
     width: 100%;
-    max-width: 1122px; /* proporcional A4 paisagem */
-    height: 794px;      /* proporcional A4 paisagem */
+    max-width: 1122px;
+    height: 794px;
     border: 4px solid #000;
     border-radius: 10px;
     display: flex;
