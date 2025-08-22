@@ -3,13 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Editor Completo de Placas</title>
+<title>Editor de Placas</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="container">
-    <h1 id="editorTitle">Editor de Placas</h1>
-
     <div class="controls">
         <label>Tipo de placa:
             <select id="placaType">
@@ -22,4 +20,26 @@
             <input type="text" id="placaText" placeholder="Ex: Casa à venda">
         </label>
 
-        <labe
+        <label>Telefone:
+            <input type="text" id="placaPhone" placeholder="(  ) 9 XXXX-XXXX" maxlength="15">
+        </label>
+
+        <button id="resetBtn">Resetar</button>
+    </div>
+
+    <div class="placa-preview" id="placaPreview">
+        <div id="placaContent">
+            <div id="placaTitle">Vende-se</div>
+            <div id="placaSub">Sua placa aqui</div>
+            <div id="placaPhonePreview">(  ) 9 XXXX-XXXX</div>
+        </div>
+    </div>
+
+    <div id="visitorCount" style="margin-top: 10px; font-weight: bold;">Carregando visitantes...</div>
+
+    <button id="printBtn">Imprimir / PDF</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
