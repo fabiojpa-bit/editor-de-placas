@@ -76,7 +76,7 @@ printBtn.addEventListener('click', () => {
 });
 
 // Contador de visitantes usando CountAPI
-const COUNT_KEY = 'editor-de-placas'; // chave única para o contador
+const COUNT_KEY = 'editor-de-placas';
 
 fetch(`https://api.countapi.xyz/hit/${COUNT_KEY}/visits`)
   .then(res => res.json())
