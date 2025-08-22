@@ -7,6 +7,7 @@ const placaSub = document.getElementById('placaSub');
 const placaPhonePreview = document.getElementById('placaPhonePreview');
 const resetBtn = document.getElementById('resetBtn');
 const printBtn = document.getElementById('printBtn');
+const visitorField = document.getElementById('visitorCount');
 
 // Cores pré-definidas
 const colors = {
@@ -73,3 +74,16 @@ printBtn.addEventListener('click', () => {
     printWindow.document.close();
     printWindow.print();
 });
+
+// Contador de visitantes usando CountAPI
+const COUNT_KEY = 'editor-de-placas'; // chave única para o contador
+
+fetch(`https://api.countapi.xyz/hit/${COUNT_KEY}/visits`)
+  .then(res => res.json())
+  .then(data => {
+      visitorField.textContent = `${data.value} visitantes`;
+  })
+  .catch(err => {
+      visitorField.textContent = `Não foi possível carregar visitantes`;
+      console.error(err);
+  });
