@@ -1,23 +1,57 @@
 body {
   font-family: Arial, sans-serif;
-  text-align: center;
   margin: 0;
   padding: 0;
 }
 
+/* Menu lateral fixo */
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
   background-color: #007BFF;
   color: white;
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+}
+
+header h1 {
+  font-size: 18px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+header nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
 }
 
 header nav a {
   color: white;
-  margin: 0 10px;
+  margin: 10px 0;
   text-decoration: none;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 5px;
+  transition: background 0.3s;
 }
 
+header nav a:hover {
+  background-color: #0056b3;
+}
+
+/* Conteúdo principal */
 main {
+  margin-left: 220px; /* espaço para o menu */
   padding: 20px;
 }
 
