@@ -4,7 +4,7 @@ body {
   padding: 0;
 }
 
-/* Menu lateral fixo */
+/* Menu lateral com apenas o título */
 header {
   position: fixed;
   top: 0;
@@ -26,44 +26,33 @@ header h1 {
   text-align: center;
 }
 
-header nav {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
-}
-
-header nav a {
-  color: white;
-  margin: 10px 0;
-  text-decoration: none;
-  font-weight: bold;
-  width: 100%;
-  text-align: center;
-  padding: 10px 0;
-  border-radius: 5px;
-  transition: background 0.3s;
-}
-
-header nav a:hover {
-  background-color: #0056b3;
-}
-
 /* Conteúdo principal */
 main {
-  margin-left: 220px; /* espaço para o menu */
+  margin-left: 220px;
   padding: 20px;
 }
 
+/* Placa vertical */
 #placa {
   border: 2px solid #000;
-  width: 400px;
+  width: 300px;
   height: 200px;
   margin: 20px auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #fff;
+  color: #000;
+  padding: 10px;
+}
+
+#placa h1, #placa p {
+  margin: 5px 0;
+}
+
+#placa h1:focus, #placa p:focus {
+  outline: 2px dashed #007BFF;
 }
 
 .hidden { display: none; }
