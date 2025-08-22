@@ -19,7 +19,7 @@ body {
     margin-bottom: 10px;
 }
 
-.controls input[type="text"], .controls select, .controls input[type="color"] {
+.controls input[type="text"], .controls select {
     width: 100%;
     padding: 5px;
     margin-top: 5px;
@@ -30,8 +30,8 @@ body {
 .placa-preview {
     margin-top: 20px;
     width: 100%;
-    max-width: 1122px; /* proporcional A4 horizontal */
-    height: 794px;      /* proporcional A4 horizontal */
+    max-width: 1122px; /* proporcional A4 paisagem */
+    height: 794px;      /* proporcional A4 paisagem */
     border: 4px solid #000;
     border-radius: 10px;
     display: flex;
